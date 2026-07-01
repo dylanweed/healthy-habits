@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./HabitList.css";
-import type { Habit } from "../types";
+import type { Habit, Indicator } from "../types";
 import { levelFromScore } from "../utils";
 import HabitPlanView from "./HabitPlanView";
+import CustomHabitForm from "./CustomHabitForm";
 
 type Level = "high" | "medium" | "low";
 const LEVELS: Level[] = ["high", "medium", "low"];
@@ -10,10 +11,20 @@ const LEVELS: Level[] = ["high", "medium", "low"];
 interface HabitListProps {
   area: string;
   habits: Habit[];
+  indicators: Indicator[];
   onToggleHabitActive: (habitName: string) => void;
+  onAddCustomHabit: (habit: Omit<Habit, "active" | "userCreated">) => void;
+  onDeleteCustomHabit: (habitName: string) => void;
 }
 
-export default function HabitList({ area, habits, onToggleHabitActive }: HabitListProps) {
+export default function HabitList({
+  area,
+  habits,
+  indicators,
+  onToggleHabitActive,
+  onAddCustomHabit,
+  onDeleteCustomHabit,
+}: HabitListProps) {
   const [expandedHabit, setExpandedHabit] = useState<string | null>(null);
 
   const groups: Record<Level, Habit[]> = { high: [], medium: [], low: [] };
@@ -71,10 +82,26 @@ export default function HabitList({ area, habits, onToggleHabitActive }: HabitLi
               <div className="habit-list__detail-panel">
                 <p className="habit-list__detail">{habit.detail}</p>
                 <HabitPlanView plan={habit.plan} />
+                {habit.targetsIndicators && habit.targetsIndicators.length > 0 && (
+                  <p className="habit-list__targets">
+                    Helps with: {habit.targetsIndicators.join(", ")}
+                  </p>
+                )}
+                {habit.userCreated && (
+                  <button
+                    type="button"
+                    className="habit-list__delete"
+                    onClick={() => onDeleteCustomHabit(habit.name)}
+                  >
+                    Delete habit
+                  </button>
+                )}
               </div>
             )}
           </li>
         ))}
+
+        <CustomHabitForm area={area} indicators={indicators} onAddCustomHabit={onAddCustomHabit} />
       </ul>
     </section>
   );

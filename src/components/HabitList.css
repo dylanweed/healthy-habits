@@ -67,6 +67,18 @@
   border-left-color: var(--low);
 }
 
+.habit-list__item--create {
+  border-left-color: transparent;
+  margin-top: 0.25rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.6rem;
+}
+
+.habit-list__item--create .habit-list__name {
+  color: var(--teal);
+  font-style: italic;
+}
+
 .habit-list__row {
   display: flex;
   align-items: center;
@@ -145,4 +157,25 @@
   font-size: 0.9rem;
   line-height: 1.45;
   margin: 0;
+}
+
+.habit-list__targets {
+  color: var(--teal);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.habit-list__delete {
+  align-self: flex-start;
+  border: none;
+  background: none;
+  color: var(--high);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.habit-list__delete:hover {
+  text-decoration: underline;
 }

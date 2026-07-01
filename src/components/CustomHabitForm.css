@@ -1,0 +1,88 @@
+.habit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0.6rem 0 0.2rem 1.7rem;
+}
+
+.habit-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.habit-form__label {
+  font-family: var(--font-data);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+}
+
+.habit-form__label--optional::after {
+  content: " (optional)";
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink-faint);
+}
+
+.habit-form__input,
+.habit-form__textarea {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.88rem;
+  font-family: inherit;
+  background: var(--paper);
+  color: var(--ink);
+  outline: none;
+  resize: vertical;
+}
+
+.habit-form__input:focus,
+.habit-form__textarea:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 2px var(--teal-wash);
+}
+
+.habit-form__textarea {
+  min-height: 52px;
+}
+
+.habit-form__checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.habit-form__checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.habit-form__submit {
+  align-self: flex-start;
+  border: none;
+  border-radius: 4px;
+  background: var(--teal);
+  color: var(--paper);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.45rem 1.1rem;
+  cursor: pointer;
+}
+
+.habit-form__submit:hover {
+  opacity: 0.85;
+}
+
+.habit-form__submit:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

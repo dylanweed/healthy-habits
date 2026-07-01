@@ -1,8 +1,22 @@
+import type { HabitPlan } from "./types";
+
+export interface UserHabit {
+  name: string;
+  area: string;
+  impact: number;
+  detail: string;
+  plan: HabitPlan;
+  targetsIndicators?: string[];
+}
+
 export interface PersistedState {
+  userId: string; // placeholder — unused until auth is added
   activeHabits: string[];
+  userHabits: UserHabit[];
 }
 
 const STORAGE_KEY = "habits_state";
+export const ANONYMOUS_USER_ID = "local";
 
 export function loadState(): PersistedState | null {
   try {

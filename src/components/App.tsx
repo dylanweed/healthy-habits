@@ -7,7 +7,7 @@ import type { Habit, HabitPlan } from "../types";
 import areas from "../data/areas.json";
 import habitDefs from "../data/habit_definitions.json";
 import indicatorDefs from "../data/indicator_definitions.json";
-import { loadState, saveState } from "../storage";
+import { loadState, saveState, ANONYMOUS_USER_ID } from "../storage";
 
 type IndicatorDef = { importance: number; detail: string };
 
@@ -30,7 +30,7 @@ export default function App() {
 
   const [habits, setHabits] = useState<Habit[]>(() => {
     const persisted = loadState();
-    return Object.entries(typedHabitDefs).flatMap(([area, areaHabits]) =>
+    const base = Object.entries(typedHabitDefs).flatMap(([area, areaHabits]) =>
       Object.entries(areaHabits).map(([name, habit]) => ({
         name,
         area,
@@ -38,11 +38,28 @@ export default function App() {
         active: persisted?.activeHabits.includes(name) ?? false,
       }))
     );
+    const userHabits = (persisted?.userHabits ?? []).map((habit) => ({
+      ...habit,
+      active: persisted?.activeHabits.includes(habit.name) ?? false,
+      userCreated: true as const,
+    }));
+    return [...base, ...userHabits];
   });
 
   useEffect(() => {
     saveState({
+      userId: ANONYMOUS_USER_ID,
       activeHabits: habits.filter((habit) => habit.active).map((habit) => habit.name),
+      userHabits: habits
+        .filter((habit) => habit.userCreated)
+        .map(({ name, area, impact, detail, plan, targetsIndicators }) => ({
+          name,
+          area,
+          impact,
+          detail,
+          plan,
+          targetsIndicators,
+        })),
     });
   }, [habits]);
 
@@ -52,6 +69,14 @@ export default function App() {
         habit.name === habitName ? { ...habit, active: !habit.active } : habit,
       ),
     );
+  }
+
+  function addCustomHabit(habit: Omit<Habit, "active" | "userCreated">) {
+    setHabits((prev) => [...prev, { ...habit, active: true, userCreated: true }]);
+  }
+
+  function deleteCustomHabit(habitName: string) {
+    setHabits((prev) => prev.filter((habit) => habit.name !== habitName));
   }
 
   const selectedArea = areas.find((area) => area.name === selected);
@@ -73,6 +98,8 @@ export default function App() {
             indicators={areaIndicators}
             habits={areaHabits}
             onToggleHabitActive={toggleHabitActive}
+            onAddCustomHabit={addCustomHabit}
+            onDeleteCustomHabit={deleteCustomHabit}
           />
         )}
       </div>
