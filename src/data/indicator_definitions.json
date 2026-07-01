@@ -1,0 +1,195 @@
+{
+  "Sleep": {
+    "Sleep duration": {
+      "importance": 9,
+      "detail": "Total time asleep per night; most adults need ~7-9 hours, teens need ~8-10, and older adults often run slightly shorter and more fragmented. Chronic short sleep is linked to nearly every major disease category.",
+      "defaultUnit": "hrs",
+      "howToMeasure": "Use a sleep tracker (Oura, Apple Watch, Garmin) or a sleep app. If you track manually, note the time you fell asleep and the time you woke up."
+    },
+    "Sleep efficiency": {
+      "importance": 7,
+      "detail": "Percentage of time in bed actually asleep; low efficiency points to fragmented or onset-delayed sleep even if total duration looks fine.",
+      "defaultUnit": "%",
+      "howToMeasure": "Most sleep trackers calculate this automatically: time asleep ÷ time in bed × 100. Without a tracker, estimate time spent awake in bed versus total time in bed."
+    },
+    "Time to fall asleep (sleep latency)": {
+      "importance": 6,
+      "detail": "How long it takes to fall asleep after lying down; persistently long latency is a hallmark of insomnia.",
+      "defaultUnit": "min",
+      "howToMeasure": "Note the time you get into bed and the time you fell asleep. A sleep tracker will calculate this automatically. Aim for a few nights of data to find your typical number."
+    },
+    "Number of awakenings": {
+      "importance": 6,
+      "detail": "Frequency of waking during the night; frequent awakenings fragment sleep architecture even without affecting total duration much.",
+      "defaultUnit": "per night",
+      "howToMeasure": "A sleep tracker reports this automatically. Without one, keep a sleep journal and note each time you wake and whether you remember it in the morning."
+    },
+    "REM/deep sleep ratio": {
+      "importance": 7,
+      "detail": "Proportion of time in restorative sleep stages; deep sleep supports physical recovery, REM supports memory and emotional processing.",
+      "defaultUnit": "%",
+      "howToMeasure": "Requires a sleep tracker with sleep stage detection (Oura, Garmin, Apple Watch, WHOOP). Results vary by device — use one device consistently for meaningful trends."
+    }
+  },
+  "Cardiovascular": {
+    "Resting heart rate": {
+      "importance": 7,
+      "detail": "Lower resting HR generally reflects better cardiovascular fitness and autonomic balance.",
+      "defaultUnit": "bpm",
+      "howToMeasure": "Measure first thing in the morning before getting out of bed: count your pulse for 60 seconds, or use a wearable (Oura, Apple Watch, Garmin). Average several mornings."
+    },
+    "Blood pressure": {
+      "importance": 9,
+      "detail": "Chronically elevated blood pressure is one of the strongest predictors of stroke, heart disease, and kidney disease.",
+      "defaultUnit": "mmHg",
+      "howToMeasure": "Use an upper-arm blood pressure cuff at home. Sit quietly for 5 minutes first. Take 2–3 readings spaced a minute apart and average them. Morning before medication is ideal."
+    },
+    "Heart rate variability (HRV)": {
+      "importance": 7,
+      "detail": "Reflects autonomic nervous system balance and recovery capacity; low HRV is associated with stress and poor recovery.",
+      "defaultUnit": "ms",
+      "howToMeasure": "A chest strap (Polar H10) is most accurate. Wearables (Oura, WHOOP, Garmin) give useful trends. Apps like HRV4Training use your phone camera. Measure at the same time each morning."
+    },
+    "VO2 max / cardiorespiratory fitness": {
+      "importance": 9,
+      "detail": "One of the strongest predictors of all-cause mortality; reflects how efficiently your body delivers and uses oxygen. Normal ranges are sex-specific (men typically score higher due to differences in hemoglobin and muscle mass) and decline somewhat with age.",
+      "defaultUnit": "ml/kg/min",
+      "howToMeasure": "Estimated automatically by Garmin, Apple Watch, and Polar during outdoor runs. For a more accurate result, use the Cooper 12-minute run test or request a lab VO2 max test at a sports medicine clinic."
+    }
+  },
+  "Body composition": {
+    "Waist-to-height ratio": {
+      "importance": 8,
+      "detail": "Tracks visceral fat better than BMI and correlates strongly with metabolic and cardiovascular risk.",
+      "defaultUnit": "ratio",
+      "howToMeasure": "Measure your waist circumference at the level of your navel with a soft tape measure (relaxed, not sucked in). Divide by your height, both in the same unit (cm or inches)."
+    },
+    "Body fat percentage": {
+      "importance": 6,
+      "detail": "Direct measure of adiposity; useful alongside waist measurements to track composition changes over time. Healthy essential-fat ranges differ meaningfully by sex (roughly 10-13% for women vs. 2-5% for men), so the same number means something different depending on sex.",
+      "defaultUnit": "%",
+      "howToMeasure": "DEXA scan is most accurate (available at sports medicine clinics and some gyms). Bioelectrical impedance scales (common bathroom scales) are less accurate but useful for trends."
+    },
+    "Lean muscle mass": {
+      "importance": 7,
+      "detail": "Higher muscle mass supports metabolic health, strength, and is protective against age-related decline (sarcopenia).",
+      "defaultUnit": "lbs",
+      "howToMeasure": "Best measured via DEXA scan, which reports fat mass and lean mass separately. Alternatively, calculate as: total body weight × (1 − body fat fraction)."
+    }
+  },
+  "Metabolic": {
+    "Fasting glucose / HbA1c": {
+      "importance": 9,
+      "detail": "Reflects average blood sugar control over time; elevated levels precede and define type 2 diabetes.",
+      "defaultUnit": "mg/dL",
+      "howToMeasure": "Fasting glucose: finger-prick glucose meter after 8+ hours of fasting, or a standard blood draw. HbA1c: blood test ordered by a doctor or via an at-home HbA1c kit (available at pharmacies)."
+    },
+    "Lipid panel (LDL, HDL, triglycerides)": {
+      "importance": 8,
+      "detail": "Key drivers of atherosclerotic cardiovascular disease risk.",
+      "defaultUnit": "mg/dL",
+      "howToMeasure": "Standard blood test ordered by your doctor, typically part of annual labs. Fast for 9–12 hours before the draw for accurate triglycerides. At-home lipid test kits are also available."
+    },
+    "Insulin sensitivity": {
+      "importance": 8,
+      "detail": "Reduced insulin sensitivity is an early, often silent precursor to metabolic syndrome and type 2 diabetes. Risk rises with age for everyone, and shifts notably for women after menopause as estrogen's protective effect declines.",
+      "defaultUnit": "HOMA-IR",
+      "howToMeasure": "Calculated from two fasting blood values — glucose and insulin — using the HOMA-IR formula: (fasting insulin in mU/L × fasting glucose in mmol/L) / 22.5. Ask your doctor to order both on the same blood draw."
+    }
+  },
+  "Physical activity": {
+    "Daily steps / active minutes": {
+      "importance": 6,
+      "detail": "A simple proxy for overall daily movement; more active minutes generally tracks with lower all-cause mortality.",
+      "defaultUnit": "steps/day",
+      "howToMeasure": "Your smartphone's built-in step counter is a reasonable baseline. A wearable (Fitbit, Garmin, Apple Watch) worn consistently gives more complete data including non-walking activity."
+    },
+    "Grip strength": {
+      "importance": 8,
+      "detail": "A surprisingly strong predictor of all-cause mortality and frailty risk, independent of overall muscle mass. Normal values are both age- and sex-normed (men typically score higher, and values decline with age), so compare against norms for your own age and sex rather than a single universal number.",
+      "defaultUnit": "kg",
+      "howToMeasure": "Use a hand dynamometer (available online for ~–40 or at many gyms). Squeeze three times with each hand; record the maximum. Measure seated with your elbow at 90°."
+    },
+    "Mobility / flexibility": {
+      "importance": 5,
+      "detail": "Range of motion affects injury risk and quality of movement, particularly with age.",
+      "defaultUnit": "score",
+      "howToMeasure": "The sit-and-reach test measures hamstring/lower back flexibility. A broader assessment: overhead squat and hip hinge in front of a mirror, or a Functional Movement Screen (FMS) with a trainer."
+    }
+  },
+  "Diet": {
+    "Whole-food vs. processed-food ratio": {
+      "importance": 7,
+      "detail": "Diets higher in whole foods correlate with better outcomes across nearly every metabolic and inflammatory marker.",
+      "defaultUnit": "%",
+      "howToMeasure": "Log a typical day of eating in a food journal or app. Count the percentage of calories (or meals) that came from minimally processed whole foods versus packaged or processed items."
+    },
+    "Fiber intake": {
+      "importance": 6,
+      "detail": "Supports gut microbiome diversity, satiety, and healthy lipid and glucose levels.",
+      "defaultUnit": "g/day",
+      "howToMeasure": "Use a food tracking app with a nutrition database — Cronometer is the most accurate for fiber. Log meals for 3–5 typical days and average the daily fiber total."
+    },
+    "Alcohol consumption": {
+      "importance": 7,
+      "detail": "Even moderate regular intake has measurable effects on sleep, liver health, and several cancer risks.",
+      "defaultUnit": "drinks/week",
+      "howToMeasure": "Count standard drinks over one typical week. One standard drink = 12 oz beer (5%), 5 oz wine (12%), or 1.5 oz spirits (40%). Be honest about pour sizes."
+    },
+    "Micronutrient status": {
+      "importance": 5,
+      "detail": "Deficiencies in key vitamins/minerals (e.g., vitamin D, B12, iron) can quietly undermine energy, immunity, and mood. Iron needs are notably higher for menstruating women than for men or postmenopausal women.",
+      "howToMeasure": "Blood panel ordered by your doctor or via a direct-to-consumer lab service (Ulta Lab Tests, InsideTracker). Key ones to check: vitamin D, B12, ferritin/iron, magnesium, folate."
+    },
+    "C-reactive protein (CRP)": {
+      "importance": 7,
+      "detail": "A general marker of systemic inflammation; chronically elevated levels are linked to cardiovascular and metabolic disease.",
+      "defaultUnit": "mg/L",
+      "howToMeasure": "High-sensitivity CRP (hs-CRP) blood test, available through your doctor or direct-to-consumer labs. Often added to a metabolic panel. No fasting required."
+    },
+    "Gut microbiome diversity": {
+      "importance": 6,
+      "detail": "Greater microbial diversity is associated with better metabolic, immune, and even mental health outcomes.",
+      "defaultUnit": "score",
+      "howToMeasure": "Microbiome testing kits (Zoe, Viome, Ombre/Thryve): collect a stool sample at home and mail it in. Results arrive in 2–4 weeks. Shannon diversity index is the most commonly reported metric."
+    }
+  },
+  "Mental/emotional": {
+    "Stress levels (e.g., cortisol patterns)": {
+      "importance": 7,
+      "detail": "Chronically elevated stress hormones contribute to cardiovascular, metabolic, and immune dysfunction.",
+      "defaultUnit": "score",
+      "howToMeasure": "Wearable HRV trends (Oura, WHOOP) give a proxy for stress load. For cortisol directly, use a salivary cortisol test (DUTCH test, ZRT Labs) taken at 4 points across one day. The PSS-10 questionnaire is a validated self-report tool."
+    },
+    "Mood stability": {
+      "importance": 6,
+      "detail": "Frequent or severe mood swings can signal underlying sleep, hormonal, or mental health issues worth addressing.",
+      "defaultUnit": "score",
+      "howToMeasure": "Track daily mood using an app (Daylio, eMoods) or a simple 1–10 daily rating in a journal over 2–4 weeks. Look at the variance, not just the average. The PHQ-9 and GAD-7 are validated clinical screens."
+    },
+    "Loneliness / social connection score": {
+      "importance": 8,
+      "detail": "Chronic loneliness carries a mortality risk comparable to smoking, making it a major and underrated health marker. Its protective counterpart, social connection, becomes an even stronger predictor of health outcomes with age.",
+      "defaultUnit": "score",
+      "howToMeasure": "Use the UCLA Loneliness Scale — the 3-item version takes under a minute and is freely available online. Repeat every few months to track change."
+    }
+  },
+  "Substance use": {
+    "Tobacco/nicotine use": {
+      "importance": 9,
+      "detail": "One of the single largest modifiable risk factors for cancer, cardiovascular disease, and early mortality.",
+      "howToMeasure": "Self-report is sufficient for most purposes. For objective confirmation (e.g., after quitting), a urine or saliva cotinine test can detect nicotine metabolites for up to 3–4 days."
+    },
+    "Alcohol units per week": {
+      "importance": 7,
+      "detail": "Cumulative alcohol exposure tracks with liver disease, several cancers, and cardiovascular risk. Women generally reach the same blood alcohol level from less alcohol than men (lower body water and different first-pass metabolism), so standard drink-limit guidance is typically lower for women.",
+      "defaultUnit": "units/week",
+      "howToMeasure": "Log every drink over one representative week. One UK unit = 10ml of pure alcohol; one US standard drink = 14g. Online calculators convert any drink to units based on volume and ABV."
+    },
+    "Recreational drug use": {
+      "importance": 6,
+      "detail": "Risk varies widely by substance and frequency, but regular use carries dependency and organ-specific risks.",
+      "howToMeasure": "Self-report frequency and substance. For objective use patterns, urine drug screening kits are available at pharmacies, though detection windows vary by substance."
+    }
+  }
+}

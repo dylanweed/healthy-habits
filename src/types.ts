@@ -14,3 +14,10 @@ export interface Habit {
   userCreated?: boolean;
   targetsIndicators?: string[];
 }
+
+export interface Indicator {
+  name: string;
+  area: string;
+  importance: number;
+  detail: string;
+}

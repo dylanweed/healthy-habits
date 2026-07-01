@@ -6,8 +6,21 @@ import Home from "./Home";
 import type { Habit, HabitPlan } from "../types";
 import areas from "../data/areas.json";
 import habitDefs from "../data/habit_definitions.json";
+import indicatorDefs from "../data/indicator_definitions.json";
 
+type IndicatorDef = { importance: number; detail: string };
+
+const defs = indicatorDefs as Record<string, Record<string, IndicatorDef>>;
 const typedHabitDefs = habitDefs as Record<string, Record<string, { impact: number; detail: string; plan: HabitPlan; targetsIndicators?: string[] }>>;
+
+const staticIndicators = Object.entries(defs).flatMap(([area, indicators]) =>
+  Object.entries(indicators).map(([name, def]) => ({
+    name,
+    area,
+    importance: def.importance,
+    detail: def.detail,
+  }))
+);
 
 const areaNames = areas.map((area) => area.name);
 
@@ -35,6 +48,8 @@ export default function App() {
 
   const selectedArea = areas.find((area) => area.name === selected);
 
+  const areaIndicators = staticIndicators.filter((indicator) => indicator.area === selected);
+
   const areaHabits = habits.filter((habit) => habit.area === selected);
 
   return (
@@ -47,6 +62,7 @@ export default function App() {
           <Area
             image={selectedArea.image}
             area={selected}
+            indicators={areaIndicators}
             habits={areaHabits}
             onToggleHabitActive={toggleHabitActive}
           />
