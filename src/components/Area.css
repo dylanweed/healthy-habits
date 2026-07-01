@@ -27,3 +27,9 @@
   font-size: 1.9rem;
   font-weight: 600;
 }
+
+@media (max-width: 680px) {
+  .area {
+    padding: 1.75rem 1.25rem;
+  }
+}

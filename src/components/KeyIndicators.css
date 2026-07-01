@@ -58,3 +58,14 @@
   font-size: 0.82rem;
   font-weight: 600;
 }
+
+@media (max-width: 680px) {
+  .indicator-section {
+    padding: 1rem 0.85rem;
+  }
+
+  .indicator-list__row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+}

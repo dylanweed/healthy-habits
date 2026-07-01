@@ -86,3 +86,9 @@
   opacity: 0.4;
   cursor: not-allowed;
 }
+
+@media (max-width: 680px) {
+  .habit-form {
+    margin-left: 0.4rem;
+  }
+}

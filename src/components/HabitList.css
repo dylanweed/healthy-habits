@@ -179,3 +179,13 @@
 .habit-list__delete:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 680px) {
+  .habit-list {
+    padding: 1rem 0.85rem;
+  }
+
+  .habit-list__detail-panel {
+    margin-left: 0.4rem;
+  }
+}
