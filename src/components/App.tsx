@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Nav from "./Nav";
 import Area from "./Area";
@@ -7,6 +7,7 @@ import type { Habit, HabitPlan } from "../types";
 import areas from "../data/areas.json";
 import habitDefs from "../data/habit_definitions.json";
 import indicatorDefs from "../data/indicator_definitions.json";
+import { loadState, saveState } from "../storage";
 
 type IndicatorDef = { importance: number; detail: string };
 
@@ -27,16 +28,23 @@ const areaNames = areas.map((area) => area.name);
 export default function App() {
   const [selected, setSelected] = useState<string | null>(null);
 
-  const [habits, setHabits] = useState<Habit[]>(() =>
-    Object.entries(typedHabitDefs).flatMap(([area, areaHabits]) =>
+  const [habits, setHabits] = useState<Habit[]>(() => {
+    const persisted = loadState();
+    return Object.entries(typedHabitDefs).flatMap(([area, areaHabits]) =>
       Object.entries(areaHabits).map(([name, habit]) => ({
         name,
         area,
         ...habit,
-        active: false,
+        active: persisted?.activeHabits.includes(name) ?? false,
       }))
-    )
-  );
+    );
+  });
+
+  useEffect(() => {
+    saveState({
+      activeHabits: habits.filter((habit) => habit.active).map((habit) => habit.name),
+    });
+  }, [habits]);
 
   function toggleHabitActive(habitName: string) {
     setHabits((prev) =>
