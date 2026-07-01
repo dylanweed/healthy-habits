@@ -1,0 +1,46 @@
+:root {
+  --paper: #ede7da;
+  --paper-raised: #f5f1e6;
+  --ink: #20242b;
+  --ink-soft: #5b5a52;
+  --ink-faint: #9b9588;
+  --line: #c9c1ae;
+  --line-soft: #ddd6c5;
+  --teal: #2f6660;
+  --teal-wash: #e1eae8;
+  --high: #b5482f;
+  --medium: #a6791e;
+  --low: #56705e;
+
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "Work Sans", system-ui, -apple-system, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+button, input, textarea {
+  font-family: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
