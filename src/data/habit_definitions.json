@@ -1,0 +1,424 @@
+{
+  "Sleep": {
+    "Keep a consistent schedule": {
+      "impact": 9,
+      "detail": "Same wake time every day, weekends included. A steady wake time anchors your circadian rhythm and matters more than a steady bedtime.",
+      "plan": {
+        "begin": "Pick one wake time and set an alarm for it every day this week, including weekends.",
+        "continue": "Hold that wake time for 3-4 weeks while letting bedtime drift naturally toward consistency.",
+        "expect": "Noticeably steadier sleep onset and daytime energy within 2-3 weeks, with full circadian adjustment by 4-6 weeks."
+      },
+      "targetsIndicators": ["Sleep duration", "Sleep efficiency", "Time to fall asleep (sleep latency)"],
+      "source": "https://www.cdc.gov/sleep/about/index.html"
+    },
+    "Get bright light early, dim light late": {
+      "impact": 8,
+      "detail": "Daylight within an hour of waking sets your clock; dimming lights and cutting screens late lets melatonin rise on schedule. Light is the strongest external signal your body clock has.",
+      "plan": {
+        "begin": "Get outside or in front of a bright window within 30-60 minutes of waking, no sunglasses.",
+        "continue": "Keep that daily, and start dimming lights and screens 1-2 hours before bed each night.",
+        "expect": "Melatonin timing typically shifts within 1-2 weeks, improving sleep onset and morning alertness."
+      },
+      "targetsIndicators": ["Time to fall asleep (sleep latency)", "Sleep duration", "Sleep efficiency"],
+      "source": "https://www.cdc.gov/niosh/work-hour-training-for-nurses/longhours/mod8/04.html"
+    },
+    "Time your caffeine": {
+      "impact": 7,
+      "detail": "~5-6 hour half-life, so a 2pm coffee is still a quarter-dose at midnight. Cut it off 8-10 hours before bed.",
+      "plan": {
+        "begin": "Work backward 8-10 hours from your usual bedtime and set a hard caffeine cutoff today.",
+        "continue": "Hold that cutoff daily, moving it earlier if you're still wired at night.",
+        "expect": "Easier sleep onset within a few days to a week."
+      },
+      "targetsIndicators": ["Time to fall asleep (sleep latency)", "Number of awakenings"],
+      "source": "https://www.cdc.gov/niosh/bulletin/2020/sleep.html"
+    },
+    "Don't lie in bed awake": {
+      "impact": 7,
+      "detail": "If you're not asleep in ~20 minutes, get up and do something dull in dim light until drowsy. Prevents your brain associating the bed with wakefulness (core idea behind CBT-I, the most effective chronic-insomnia treatment).",
+      "plan": {
+        "begin": "Tonight, if you're not asleep in ~20 minutes, get up and do something dull in dim light until drowsy.",
+        "continue": "Repeat every night you can't fall asleep, without exception.",
+        "expect": "Noticeably shorter time-to-fall-asleep within 2-4 weeks as your brain re-learns bed equals sleep."
+      },
+      "targetsIndicators": ["Time to fall asleep (sleep latency)", "Sleep efficiency"],
+      "source": "https://www.sleepfoundation.org/insomnia/treatment/cognitive-behavioral-therapy-insomnia"
+    },
+    "Watch alcohol": {
+      "impact": 6,
+      "detail": "Speeds sleep onset but fragments the back half of the night and suppresses REM, trading quality for falling asleep faster. Avoid close to bedtime.",
+      "plan": {
+        "begin": "Skip alcohol within 3-4 hours of bedtime tonight.",
+        "continue": "Keep that buffer nightly, extending it if you still wake in the middle of the night.",
+        "expect": "Less fragmented second-half-of-night sleep within a few nights."
+      },
+      "targetsIndicators": ["Number of awakenings", "REM/deep sleep ratio"],
+      "source": "https://www.cdc.gov/sleep/about/index.html"
+    },
+    "Cool, dark, quiet room": {
+      "impact": 6,
+      "detail": "Slightly cool is ideal; core body temperature has to drop for sleep to initiate, and a warm room fights that.",
+      "plan": {
+        "begin": "Tonight, drop your bedroom temperature a couple degrees and block light sources (blackout curtains, cover LEDs).",
+        "continue": "Keep the room cool and dark every night, adding earplugs or white noise if needed.",
+        "expect": "Faster sleep onset and fewer awakenings within the first week."
+      },
+      "targetsIndicators": ["Time to fall asleep (sleep latency)", "Number of awakenings"],
+      "source": "https://www.cdc.gov/sleep/about/index.html"
+    },
+    "Exercise regularly": {
+      "impact": 5,
+      "detail": "Real but secondary; for some people, not right before bed.",
+      "plan": {
+        "begin": "Schedule three 20-30 minute aerobic sessions this week, not right before bed.",
+        "continue": "Keep a 3x/week cadence ongoing.",
+        "expect": "Improved sleep depth and consistency over 2-4 weeks as a secondary benefit of training."
+      },
+      "targetsIndicators": ["REM/deep sleep ratio", "Sleep efficiency"],
+      "source": "https://www.cdc.gov/sleep/about/index.html"
+    },
+    "Avoid large meals late": {
+      "impact": 4,
+      "detail": "Secondary; a heavy late meal works against you.",
+      "plan": {
+        "begin": "Shift tonight's dinner to at least 3 hours before bed, or keep it light if that's not possible.",
+        "continue": "Keep that 3-hour buffer most nights.",
+        "expect": "Less reflux/discomfort and smoother sleep onset within days."
+      },
+      "targetsIndicators": ["Time to fall asleep (sleep latency)", "Number of awakenings"],
+      "source": "https://www.cdc.gov/sleep/about/index.html"
+    }
+  },
+  "Cardiovascular": {
+    "Aerobic exercise (zone 2 + intervals)": {
+      "impact": 9,
+      "detail": "Regular aerobic training, mixing easy-paced volume with occasional high intensity, is the most direct way to raise VO2 max and lower resting heart rate.",
+      "plan": {
+        "begin": "Pick 2 days this week for 30-40 minutes of easy-paced cardio (conversational pace) and 1 day for short intervals.",
+        "continue": "Hold 3x/week, gradually adding volume or intensity every few weeks.",
+        "expect": "Measurable improvements in resting heart rate and VO2 max within 6-8 weeks of consistent training."
+      },
+      "targetsIndicators": ["VO2 max / cardiorespiratory fitness", "Resting heart rate", "Heart rate variability (HRV)"],
+      "source": "https://www.heart.org/en/healthy-living/exercise-and-physical-activity/fitness-basics/aha-recs-for-physical-activity-in-adults"
+    },
+    "Manage sodium intake": {
+      "impact": 5,
+      "detail": "Excess sodium contributes to elevated blood pressure in salt-sensitive individuals.",
+      "plan": {
+        "begin": "Read labels for one day to spot your biggest sodium sources (sauces, processed food, takeout).",
+        "continue": "Swap 1-2 of those for lower-sodium options each week.",
+        "expect": "Noticeably lower blood pressure in salt-sensitive people within 2-4 weeks."
+      },
+      "targetsIndicators": ["Blood pressure"],
+      "source": "https://www.heart.org/en/health-topics/high-blood-pressure/changes-you-can-make-to-manage-high-blood-pressure/shaking-the-salt-habit-to-lower-high-blood-pressure"
+    },
+    "Stress management": {
+      "impact": 6,
+      "detail": "Chronic stress elevates blood pressure and heart rate via sustained sympathetic activation.",
+      "plan": {
+        "begin": "Pick one short practice (5-minute breathing, a walk, journaling) and do it today.",
+        "continue": "Repeat daily, especially during high-stress periods.",
+        "expect": "Easing resting heart rate and blood pressure within a few weeks of consistent practice."
+      },
+      "targetsIndicators": ["Blood pressure", "Resting heart rate", "Heart rate variability (HRV)"],
+      "source": "https://www.heart.org/en/health-topics/high-blood-pressure/changes-you-can-make-to-manage-high-blood-pressure/managing-stress-to-control-high-blood-pressure"
+    },
+    "Avoid smoking": {
+      "impact": 9,
+      "detail": "Smoking damages blood vessels directly and is one of the largest modifiable cardiovascular risk factors.",
+      "plan": {
+        "begin": "Set a quit date within the next 2 weeks and tell someone for accountability.",
+        "continue": "Use nicotine replacement or support resources as needed, and treat any slip as data, not failure.",
+        "expect": "Cardiovascular risk starts dropping within days, with major risk reduction accumulating over 1-5 years."
+      },
+      "targetsIndicators": ["Blood pressure", "Resting heart rate", "VO2 max / cardiorespiratory fitness"],
+      "source": "https://www.heart.org/en/healthy-living/healthy-lifestyle/quit-smoking-tobacco"
+    }
+  },
+  "Body composition": {
+    "Resistance training": {
+      "impact": 8,
+      "detail": "Builds and preserves muscle mass, which counters age-related sarcopenia and supports metabolic health. Its relative importance rises with age, since muscle loss that's barely noticeable in your 20s becomes a major driver of frailty risk by your 60s and beyond.",
+      "plan": {
+        "begin": "Schedule 2 full-body strength sessions this week (bodyweight is fine to start).",
+        "continue": "Build to 2-3x/week, progressively adding weight or reps.",
+        "expect": "Visible strength gains in 2-4 weeks, measurable muscle mass changes over 8-12 weeks."
+      },
+      "targetsIndicators": ["Lean muscle mass", "Body fat percentage"],
+      "source": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html"
+    },
+    "Adequate protein intake": {
+      "impact": 7,
+      "detail": "Sufficient protein, especially alongside resistance training, supports muscle maintenance and growth.",
+      "plan": {
+        "begin": "Estimate a rough target of 0.7-1g of protein per pound of bodyweight and aim for it today.",
+        "continue": "Hit that target daily, spread across meals.",
+        "expect": "Noticeably better muscle retention/growth within 4-6 weeks, especially paired with training."
+      },
+      "targetsIndicators": ["Lean muscle mass"],
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4555150/"
+    },
+    "Calorie balance appropriate to goals": {
+      "impact": 6,
+      "detail": "Sustained calorie surplus or deficit relative to goals drives changes in fat mass and, combined with training, body composition overall.",
+      "plan": {
+        "begin": "Track your intake for 3-5 days to find your current baseline.",
+        "continue": "Adjust intake by roughly 10-15% toward your goal (surplus or deficit) and reassess every 2 weeks.",
+        "expect": "Visible body composition shifts typically take 6-12 weeks depending on the size of the gap."
+      },
+      "targetsIndicators": ["Body fat percentage", "Waist-to-height ratio"],
+      "source": "https://www.cdc.gov/healthy-weight-growth/about/tips-for-balancing-food-activity.html"
+    }
+  },
+  "Metabolic": {
+    "Limit refined carbs and added sugar": {
+      "impact": 8,
+      "detail": "Reduces glycemic load and the chronic insulin demand that drives insulin resistance over time.",
+      "plan": {
+        "begin": "Identify your single biggest source of added sugar today (soda, pastries, etc.) and cut it.",
+        "continue": "Keep swapping one source at a time over the next few weeks.",
+        "expect": "Smaller post-meal glucose spikes within 1-2 weeks, with HbA1c shifts over 8-12 weeks."
+      },
+      "targetsIndicators": ["Fasting glucose / HbA1c", "Insulin sensitivity"],
+      "source": "https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/sugar/added-sugars"
+    },
+    "Move after meals": {
+      "impact": 5,
+      "detail": "A short walk after eating blunts the post-meal glucose spike.",
+      "plan": {
+        "begin": "Take a 10-minute walk after your next meal.",
+        "continue": "Repeat after meals daily, especially the largest one.",
+        "expect": "Blunted post-meal glucose spikes immediately, with cumulative metabolic benefit over weeks."
+      },
+      "targetsIndicators": ["Fasting glucose / HbA1c", "Insulin sensitivity"],
+      "source": "https://www.uclahealth.org/news/article/walking-after-meal-helps-keep-blood-sugar-check"
+    },
+    "Maintain a healthy weight": {
+      "impact": 7,
+      "detail": "Excess body fat, especially visceral fat, is a primary driver of insulin resistance.",
+      "plan": {
+        "begin": "Get a baseline weigh-in and pick a modest, sustainable calorie adjustment.",
+        "continue": "Track weekly, adjusting intake or activity every 2-3 weeks based on the trend.",
+        "expect": "Meaningful insulin sensitivity improvements typically show within 8-12 weeks of steady progress."
+      },
+      "targetsIndicators": ["Insulin sensitivity", "Fasting glucose / HbA1c"],
+      "source": "https://www.cdc.gov/diabetes/living-with/healthy-weight.html"
+    },
+    "Prioritize sleep": {
+      "impact": 6,
+      "detail": "Poor sleep directly worsens insulin sensitivity and glucose regulation, even after a single bad night.",
+      "plan": {
+        "begin": "Set a consistent wake time this week.",
+        "continue": "Protect 7-9 hours nightly.",
+        "expect": "Glucose regulation can improve after just a few nights of better sleep, with full effect over 2-4 weeks."
+      },
+      "targetsIndicators": ["Insulin sensitivity", "Fasting glucose / HbA1c"],
+      "source": "https://www.nih.gov/news-events/news-releases/chronic-sleep-deficiency-increases-insulin-resistance-women-especially-postmenopausal-women"
+    }
+  },
+  "Physical activity": {
+    "Strength training 2-3x/week": {
+      "impact": 8,
+      "detail": "Builds the strength and muscle mass that grip strength and mobility markers reflect.",
+      "plan": {
+        "begin": "Book 2 sessions on your calendar this week, 30 minutes each.",
+        "continue": "Keep the 2-3x/week cadence, progressively overloading.",
+        "expect": "Noticeable grip and functional strength gains within 4-6 weeks."
+      },
+      "targetsIndicators": ["Grip strength"],
+      "source": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html"
+    },
+    "Daily walking": {
+      "impact": 6,
+      "detail": "Low-barrier way to accumulate active minutes and steps consistently.",
+      "plan": {
+        "begin": "Take a 15-20 minute walk today.",
+        "continue": "Build to a daily habit, aiming for 7-10k steps.",
+        "expect": "More energy within days, with measurable fitness gains over a few weeks."
+      },
+      "targetsIndicators": ["Daily steps / active minutes"],
+      "source": "https://www.cdc.gov/physical-activity-basics/adding-adults/index.html"
+    },
+    "Mobility work": {
+      "impact": 4,
+      "detail": "Regular stretching or mobility drills maintain range of motion over time.",
+      "plan": {
+        "begin": "Do a 5-10 minute stretch/mobility routine today targeting your tightest areas.",
+        "continue": "Repeat 3-4x/week.",
+        "expect": "Noticeable range-of-motion improvement within 2-3 weeks."
+      },
+      "targetsIndicators": ["Mobility / flexibility"],
+      "source": "https://go4life.nia.nih.gov/exercise-type/flexibility/"
+    },
+    "Minimize prolonged sitting": {
+      "impact": 5,
+      "detail": "Breaking up long sitting periods reduces metabolic and musculoskeletal downsides independent of total exercise volume.",
+      "plan": {
+        "begin": "Set a timer to stand and move for 2 minutes every hour starting today.",
+        "continue": "Keep the hourly break going as a default habit.",
+        "expect": "Improved post-meal glucose and circulation within the first week of consistent breaks."
+      },
+      "targetsIndicators": ["Daily steps / active minutes"],
+      "source": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html"
+    }
+  },
+  "Diet": {
+    "Prioritize whole foods": {
+      "impact": 7,
+      "detail": "Building meals around minimally processed foods naturally improves fiber, micronutrient, and macronutrient quality.",
+      "plan": {
+        "begin": "Swap one processed meal today for a whole-food version.",
+        "continue": "Keep swapping meals over the next few weeks until whole foods are the default.",
+        "expect": "Better energy and digestion within 1-2 weeks, broader metabolic markers improving over 8-12 weeks."
+      },
+      "targetsIndicators": ["Whole-food vs. processed-food ratio", "Micronutrient status", "C-reactive protein (CRP)"],
+      "source": "https://nutritionsource.hsph.harvard.edu/healthy-eating-plate/"
+    },
+    "Hit protein and fiber targets": {
+      "impact": 6,
+      "detail": "Deliberately tracking these two macros tends to crowd out lower-quality processed food by default.",
+      "plan": {
+        "begin": "Track today's protein and fiber intake to find your baseline gap.",
+        "continue": "Add one protein- or fiber-rich food per meal until you consistently hit target.",
+        "expect": "More stable satiety and energy within days; body composition effects build over weeks."
+      },
+      "targetsIndicators": ["Fiber intake"],
+      "source": "https://newsinhealth.nih.gov/2019/07/rough-up-your-diet"
+    },
+    "Limit alcohol": {
+      "impact": 6,
+      "detail": "Setting an intentional weekly cap reduces cumulative liver, sleep, and cancer-risk exposure. Women typically feel the effects of the same amount of alcohol more than men and are often advised to set a lower cap.",
+      "plan": {
+        "begin": "Set a weekly drink cap today and write it down.",
+        "continue": "Track against that cap weekly, adjusting down if needed.",
+        "expect": "Improved sleep and liver markers within 2-4 weeks of staying under the cap."
+      },
+      "targetsIndicators": ["Alcohol consumption"],
+      "source": "https://www.rethinkingdrinking.niaaa.nih.gov/how-much-is-too-much/is-your-drinking-pattern-risky/Drinking-Levels.aspx"
+    },
+    "Stay hydrated": {
+      "impact": 4,
+      "detail": "Adequate water intake supports cognitive performance and general physiological function.",
+      "plan": {
+        "begin": "Drink a glass of water now and set a daily target (roughly half your body weight in ounces).",
+        "continue": "Keep hitting that target daily.",
+        "expect": "Better cognitive clarity and energy often within days."
+      },
+      "source": "https://www.cdc.gov/healthy-weight-growth/water-healthy-drinks/index.html"
+    },
+    "Diverse plant fiber intake": {
+      "impact": 7,
+      "detail": "A wide variety of plant fibers feeds a broader range of gut bacteria, supporting microbiome diversity.",
+      "plan": {
+        "begin": "Add one new plant food (a different vegetable, legume, or grain) to your next meal.",
+        "continue": "Aim for 20-30 different plant foods per week.",
+        "expect": "Measurable gut microbiome diversity shifts within 4-6 weeks of sustained variety."
+      },
+      "targetsIndicators": ["Fiber intake", "Gut microbiome diversity"],
+      "source": "https://microsetta.ucsd.edu/30-plants-per-week/"
+    },
+    "Eat fermented foods": {
+      "impact": 5,
+      "detail": "Foods like yogurt, kefir, and sauerkraut introduce beneficial live cultures that can support gut health.",
+      "plan": {
+        "begin": "Add one serving of yogurt, kefir, or sauerkraut today.",
+        "continue": "Keep a fermented food in your routine most days.",
+        "expect": "Gut microbiome changes can begin within 2-4 weeks of regular intake."
+      },
+      "targetsIndicators": ["Gut microbiome diversity"],
+      "source": "https://www.health.harvard.edu/staying-healthy/fermented-foods-can-add-depth-to-your-diet"
+    },
+    "Reduce processed food and alcohol": {
+      "impact": 6,
+      "detail": "Both are associated with reduced microbiome diversity and increased systemic inflammation.",
+      "plan": {
+        "begin": "Cut your single biggest processed-food or alcohol source today.",
+        "continue": "Keep reducing incrementally over the next few weeks.",
+        "expect": "Inflammatory markers like CRP can start improving within 4-8 weeks."
+      },
+      "targetsIndicators": ["Whole-food vs. processed-food ratio", "C-reactive protein (CRP)", "Gut microbiome diversity", "Alcohol consumption"],
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12389707/"
+    }
+  },
+  "Mental/emotional": {
+    "Regular social contact": {
+      "impact": 8,
+      "detail": "Consistent meaningful interaction is one of the strongest protective factors against loneliness-related health decline.",
+      "plan": {
+        "begin": "Reach out to one person today to schedule a call or meetup this week.",
+        "continue": "Keep a standing weekly social touchpoint going.",
+        "expect": "Improved mood and loneliness scores within 2-3 weeks of consistent connection."
+      },
+      "targetsIndicators": ["Loneliness / social connection score", "Mood stability"],
+      "source": "https://www.hhs.gov/surgeongeneral/reports-and-publications/connection/index.html"
+    },
+    "Stress-reduction practices": {
+      "impact": 6,
+      "detail": "Meditation, journaling, or similar practices measurably lower chronic stress markers over time.",
+      "plan": {
+        "begin": "Try a 5-10 minute meditation or journaling session today.",
+        "continue": "Repeat daily, same time if possible.",
+        "expect": "Improved stress markers and mood stability within 2-4 weeks."
+      },
+      "targetsIndicators": ["Stress levels (e.g., cortisol patterns)", "Mood stability"],
+      "source": "https://www.nccih.nih.gov/health/stress"
+    },
+    "Time outdoors": {
+      "impact": 5,
+      "detail": "Outdoor time supports mood, vitamin D status, and circadian regulation.",
+      "plan": {
+        "begin": "Spend 15-20 minutes outside today, ideally in daylight.",
+        "continue": "Make it a daily habit.",
+        "expect": "Mood and circadian benefits often show within the first week."
+      },
+      "targetsIndicators": ["Mood stability", "Stress levels (e.g., cortisol patterns)"],
+      "source": "https://www.health.harvard.edu/mind-and-mood/a-20-minute-nature-break-relieves-stress"
+    },
+    "Limit doomscrolling": {
+      "impact": 5,
+      "detail": "Excessive passive social media/news consumption is associated with worse mood and sleep outcomes.",
+      "plan": {
+        "begin": "Set a daily time limit on news/social apps starting today.",
+        "continue": "Hold that limit, replacing the freed time with something restorative.",
+        "expect": "Improved mood and sleep quality within 1-2 weeks."
+      },
+      "targetsIndicators": ["Mood stability", "Stress levels (e.g., cortisol patterns)"],
+      "source": "https://www.apa.org/monitor/2022/11/strain-media-overload"
+    }
+  },
+  "Substance use": {
+    "Abstain from or quit tobacco": {
+      "impact": 9,
+      "detail": "Quitting smoking is one of the highest-leverage health interventions at any age.",
+      "plan": {
+        "begin": "Set a quit date within the next 2 weeks and remove tobacco from your environment.",
+        "continue": "Use support resources (NRT, counseling) and treat slips as data, not failure.",
+        "expect": "Cardiovascular risk drops within days, with major risk reduction accumulating over 1-5 years."
+      },
+      "targetsIndicators": ["Tobacco/nicotine use"],
+      "source": "https://smokefree.gov/quit-smoking/getting-started"
+    },
+    "Set an intentional alcohol limit": {
+      "impact": 6,
+      "detail": "A deliberate weekly cap prevents gradual creep into higher-risk consumption. Because women generally metabolize alcohol more slowly than men, a lower cap is often appropriate.",
+      "plan": {
+        "begin": "Write down a weekly drink cap today.",
+        "continue": "Track against it weekly, adjusting down if you consistently hit it.",
+        "expect": "Improved sleep and liver markers within 2-4 weeks of staying under the cap."
+      },
+      "targetsIndicators": ["Alcohol units per week"],
+      "source": "https://www.rethinkingdrinking.niaaa.nih.gov/how-much-is-too-much/is-your-drinking-pattern-risky/Drinking-Levels.aspx"
+    },
+    "Avoid using substances as a coping mechanism": {
+      "impact": 6,
+      "detail": "Habitual use to manage stress or emotions tends to escalate frequency and dependency risk over time.",
+      "plan": {
+        "begin": "Next time you reach for a substance to manage stress, pause and name the feeling instead.",
+        "continue": "Build a list of 2-3 alternative coping actions (walk, call a friend, breathing exercise) and use them when the urge hits.",
+        "expect": "Dependency risk drops with each substituted instance; coping skills typically strengthen over 4-8 weeks."
+      },
+      "targetsIndicators": ["Recreational drug use", "Alcohol units per week"],
+      "source": "https://www.samhsa.gov/find-support/how-to-cope"
+    }
+  }
+}

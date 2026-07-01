@@ -3,14 +3,39 @@ import "./App.css";
 import Nav from "./Nav";
 import Area from "./Area";
 import Home from "./Home";
+import type { Habit, HabitPlan } from "../types";
 import areas from "../data/areas.json";
+import habitDefs from "../data/habit_definitions.json";
+
+const typedHabitDefs = habitDefs as Record<string, Record<string, { impact: number; detail: string; plan: HabitPlan; targetsIndicators?: string[] }>>;
 
 const areaNames = areas.map((area) => area.name);
 
 export default function App() {
   const [selected, setSelected] = useState<string | null>(null);
 
+  const [habits, setHabits] = useState<Habit[]>(() =>
+    Object.entries(typedHabitDefs).flatMap(([area, areaHabits]) =>
+      Object.entries(areaHabits).map(([name, habit]) => ({
+        name,
+        area,
+        ...habit,
+        active: false,
+      }))
+    )
+  );
+
+  function toggleHabitActive(habitName: string) {
+    setHabits((prev) =>
+      prev.map((habit) =>
+        habit.name === habitName ? { ...habit, active: !habit.active } : habit,
+      ),
+    );
+  }
+
   const selectedArea = areas.find((area) => area.name === selected);
+
+  const areaHabits = habits.filter((habit) => habit.area === selected);
 
   return (
     <div className="app">
@@ -19,7 +44,12 @@ export default function App() {
         {selected === null || !selectedArea ? (
           <Home areas={areas} onSelect={setSelected} />
         ) : (
-          <Area image={selectedArea.image} area={selected} />
+          <Area
+            image={selectedArea.image}
+            area={selected}
+            habits={areaHabits}
+            onToggleHabitActive={toggleHabitActive}
+          />
         )}
       </div>
     </div>
