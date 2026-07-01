@@ -1,6 +1,8 @@
+import { useState } from "react";
 import "./HabitList.css";
 import type { Habit } from "../types";
 import { levelFromScore } from "../utils";
+import HabitPlanView from "./HabitPlanView";
 
 type Level = "high" | "medium" | "low";
 const LEVELS: Level[] = ["high", "medium", "low"];
@@ -12,18 +14,26 @@ interface HabitListProps {
 }
 
 export default function HabitList({ area, habits, onToggleHabitActive }: HabitListProps) {
+  const [expandedHabit, setExpandedHabit] = useState<string | null>(null);
+
   const groups: Record<Level, Habit[]> = { high: [], medium: [], low: [] };
   for (const habit of habits) {
     groups[levelFromScore(habit.impact)].push(habit);
   }
   const ordered = LEVELS.flatMap((level) => groups[level].map((habit) => ({ habit, level })));
 
+  function toggleExpand(habitName: string) {
+    setExpandedHabit((prev) => (prev === habitName ? null : habitName));
+  }
+
   return (
     <section className="habit-list">
       <div className="habit-list__header">
         <h2>{area} Habits</h2>
       </div>
-      <p className="habit-list__hint">Check the ones you're doing.</p>
+      <p className="habit-list__hint">
+        Check the ones you're doing — tap a habit to see its plan.
+      </p>
       <ul>
         {ordered.map(({ habit, level }) => (
           <li key={habit.name} className={`habit-list__item habit-list__item--${level}`}>
@@ -35,11 +45,34 @@ export default function HabitList({ area, habits, onToggleHabitActive }: HabitLi
                 aria-label={`Track ${habit.name}`}
                 onChange={() => onToggleHabitActive(habit.name)}
               />
-              <span className="habit-list__name">
-                {habit.name}
-                {level === "high" && <span className="habit-list__tag">Highly Impactful</span>}
-              </span>
+              <button
+                type="button"
+                className="habit-list__expand-btn"
+                aria-label={
+                  expandedHabit === habit.name
+                    ? `Hide plan for ${habit.name}`
+                    : `Show plan for ${habit.name}`
+                }
+                aria-expanded={expandedHabit === habit.name}
+                onClick={() => toggleExpand(habit.name)}
+              >
+                <span className="habit-list__name">
+                  {habit.name}
+                  {level === "high" && (
+                    <span className="habit-list__tag">Highly Impactful</span>
+                  )}
+                </span>
+                <span className="habit-list__chevron" aria-hidden>
+                  {expandedHabit === habit.name ? "▾" : "▸"}
+                </span>
+              </button>
             </div>
+            {expandedHabit === habit.name && (
+              <div className="habit-list__detail-panel">
+                <p className="habit-list__detail">{habit.detail}</p>
+                <HabitPlanView plan={habit.plan} />
+              </div>
+            )}
           </li>
         ))}
       </ul>

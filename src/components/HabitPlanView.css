@@ -1,0 +1,27 @@
+.habit-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.habit-plan__step {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.habit-plan__label {
+  font-family: var(--font-data);
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--teal);
+  padding-top: 0.15em;
+}
+
+.habit-plan__text {
+  color: var(--ink-soft);
+}
