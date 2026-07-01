@@ -1,0 +1,29 @@
+.area {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.75rem 1.5rem;
+}
+
+.area__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.25rem;
+}
+
+.area__avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  filter: grayscale(0.4) sepia(0.15);
+}
+
+.area__title {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 600;
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Sleep",
+    "image": "https://openclipart.org/image/800px/181947"
+  },
+  {
+    "name": "Cardiovascular",
+    "image": "https://openclipart.org/image/800px/212111"
+  },
+  {
+    "name": "Body composition",
+    "image": "https://openclipart.org/image/800px/23591"
+  },
+  {
+    "name": "Metabolic",
+    "image": "https://openclipart.org/image/800px/25348"
+  },
+  {
+    "name": "Physical activity",
+    "image": "https://openclipart.org/image/800px/300624"
+  },
+  {
+    "name": "Diet",
+    "image": "https://openclipart.org/image/800px/25185"
+  },
+  {
+    "name": "Mental/emotional",
+    "image": "https://openclipart.org/image/800px/279689"
+  },
+  {
+    "name": "Substance use",
+    "image": "https://openclipart.org/image/800px/340484"
+  }
+]
