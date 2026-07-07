@@ -14,12 +14,8 @@
 
 .area__avatar {
   display: block;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid var(--line);
-  filter: grayscale(0.4) sepia(0.15);
+  width: 48px;
+  height: 48px;
 }
 
 .area__title {

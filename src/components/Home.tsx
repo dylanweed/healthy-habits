@@ -1,16 +1,5 @@
 import "./Home.css";
-
-const icons = import.meta.glob("../assets/icons/*.svg", {
-  eager: true,
-  query: "?url",
-  import: "default",
-}) as Record<string, string>;
-
-function iconUrl(filename: string): string {
-  const entry = Object.entries(icons).find(([path]) => path.endsWith(`/${filename}`));
-  if (!entry) throw new Error(`Missing icon asset: ${filename}`);
-  return entry[1];
-}
+import { iconUrl } from "../icons";
 
 interface Area {
   name: string;

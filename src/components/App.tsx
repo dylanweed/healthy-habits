@@ -5,6 +5,7 @@ import Area from "./Area";
 import Home from "./Home";
 import type { Habit, HabitPlan } from "../types";
 import areas from "../data/areas.json";
+import { iconUrl } from "../icons";
 import habitDefs from "../data/habit_definitions.json";
 import indicatorDefs from "../data/indicator_definitions.json";
 import { loadState, saveState, ANONYMOUS_USER_ID } from "../storage";
@@ -93,7 +94,7 @@ export default function App() {
           <Home areas={areas} onSelect={setSelected} />
         ) : (
           <Area
-            image={selectedArea.image}
+            image={iconUrl(selectedArea.image)}
             area={selected}
             indicators={areaIndicators}
             habits={areaHabits}
