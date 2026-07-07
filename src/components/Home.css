@@ -96,11 +96,8 @@
 }
 
 .home__card-image {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  object-fit: cover;
-  filter: grayscale(0.4) sepia(0.15);
+  width: 40px;
+  height: 40px;
 }
 
 .home__card-name {

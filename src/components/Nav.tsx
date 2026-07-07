@@ -11,7 +11,7 @@ export default function Nav({ areas, selected, onSelect, onHome }: NavProps) {
   return (
     <nav className="nav">
       <button type="button" className="nav__title" onClick={onHome}>
-        Health Habits
+        Healthy Habits
       </button>
       <ul>
         {areas.map((area) => (

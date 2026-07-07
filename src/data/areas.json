@@ -1,34 +1,34 @@
 [
   {
     "name": "Sleep",
-    "image": "https://openclipart.org/image/800px/181947"
+    "image": "sleep.svg"
   },
   {
     "name": "Cardiovascular",
-    "image": "https://openclipart.org/image/800px/212111"
+    "image": "cardiovascular.svg"
   },
   {
     "name": "Body composition",
-    "image": "https://openclipart.org/image/800px/23591"
+    "image": "body-composition.svg"
   },
   {
     "name": "Metabolic",
-    "image": "https://openclipart.org/image/800px/25348"
+    "image": "metabolic.svg"
   },
   {
     "name": "Physical activity",
-    "image": "https://openclipart.org/image/800px/300624"
+    "image": "physical-activity.svg"
   },
   {
     "name": "Diet",
-    "image": "https://openclipart.org/image/800px/25185"
+    "image": "diet.svg"
   },
   {
     "name": "Mental/emotional",
-    "image": "https://openclipart.org/image/800px/279689"
+    "image": "mental-emotional.svg"
   },
   {
     "name": "Substance use",
-    "image": "https://openclipart.org/image/800px/340484"
+    "image": "substance-use.svg"
   }
 ]
